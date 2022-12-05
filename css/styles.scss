@@ -1,0 +1,146 @@
+$Red: hsl(0, 78%, 62%);
+$Cyan: hsl(180, 62%, 55%);
+$Orange: hsl(34, 97%, 64%);
+$Blue: hsl(212, 86%, 64%);
+$VeryDarkBlue: hsl(234, 12%, 34%);
+$GrayishBlue: hsl(229, 6%, 66%);
+$VeryLightGray: hsl(0, 0%, 98%);
+$White: #fff;
+
+*, ::after, ::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: $VeryLightGray;
+    font-family: 'Poppins', sans-serif;
+}
+
+header, main{
+    margin: 0 auto;
+    max-width: 108rem;
+    width: 90%;
+}
+
+header{
+    color: $VeryDarkBlue;
+    height: auto;
+    margin: 9.2rem auto 7.8rem;
+    padding: 0 0.8rem;
+    text-align: center;
+    h1{
+        font-size: 2.4rem;
+        font-weight: 600;
+        margin: 0;
+    }
+    h2{
+        font-size: 2.4rem;
+        font-weight: 200;
+        margin: 0;
+    }
+    p{
+        color: $GrayishBlue;
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.8;
+        margin: 3.2rem 0rem 0;
+    }
+}
+@media (min-width:768px) {
+    header{
+        margin: 8.8 auto 6.6rem;
+        padding: 0;
+        width: 45%;
+        h1{
+            font-size: 4rem;
+            margin-bottom: 0rem;
+        }
+        h2{
+            font-size: 4rem;
+        }
+        p{
+            font-size: 1.8rem;
+            margin: 2.8rem 0 0;
+        }
+    }
+}
+
+main{
+    .card{
+        background-color: $White;
+        border-radius: 0.8rem;
+        box-shadow: 0rem 1.2rem 2rem hsl(234, 12%, 34%, 0.1);
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto 6rem;
+        padding: 3.2rem;
+        .card__title{
+            font-size: 1.8rem;
+        }
+        .card__text{
+            color: $GrayishBlue;
+            font-size: 1.4rem;
+            line-height: 1.9em;
+        }
+        .card__icon{
+            align-self: flex-end;
+            margin-right: 0;
+            margin-top: 4rem;
+            width: 5rem;
+        }
+    }
+    .card:nth-child(1){
+        border-top: 0.5rem solid $Cyan;
+    }
+    .card:nth-child(2){
+        border-top: 0.5rem solid $Red;
+    }
+    .card:nth-child(3){
+        border-top: 0.5rem solid $Orange;
+    }
+    .card:nth-child(4){
+        border-top: 0.5rem solid $Blue;
+    }
+}
+
+@media (min-width: 768px) {
+    main{
+        display: grid;
+        gap:3.2rem;
+        grid-template-columns: repeat(3, 35rem);
+        grid-template-rows: repeat(3, max-content);
+        height: auto;
+        justify-content: center;
+        margin: 0 auto 6rem;
+    }
+    .card:nth-child(1), .card:nth-child(4){
+        grid-row: 2/4;
+        margin-bottom: 0;
+    }
+    .card:nth-child(2){
+        grid-row: 1/3;
+        margin-bottom: 0;
+    }
+    .card:nth-child(3){
+        grid-row: 3/5;
+        margin-bottom: 0;
+    }
+}
+
+footer{
+    align-items: center;
+    color: $VeryDarkBlue;
+    display: flex;
+    font-size: 0.9rem;
+    height: 5rem;
+    justify-content: center;
+    a{
+        color: $VeryDarkBlue;
+    }
+}
